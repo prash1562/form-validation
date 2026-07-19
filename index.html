@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2bc974e80d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Form Validation</h1>
+        <form action="" id="form" class="form-vslidation">
+            <label for="first-name">First Name</label><input type="text" id="first-name" placeholder="eg: Rohit" /><span
+                id="fname-missing">First name is required</span>
+            <label for="last-name">Last Name</label><input type="text" id="last-name" placeholder="eg: Sharma" /><span
+                id="lname-missing">Last name is required</span>
+            <label for="email">Email</label><input type="text" id="email"
+                placeholder="eg: rohit.sharma@example.com" /><span id="email-missing">Email is required</span>
+            <label for="password">Password</label><input type="password" id="password"
+                placeholder="eg: ********" /><button type="button" id="show-password" onclick="togglePasswordVisibility()"><i class="fa-solid fa-eye"></i></button><span id="password-missing">Password is required</span>
+            <p class="instructions">Password must be at least 8 characters long, consist of atleast one uppercase
+                letter, one lowercase letter, one number, and one special character (consisting of @ $ ! ^ ( ) % * # ?
+                &).</p>
+            <label for="confirm-password">Confirm Password</label><input type="password" id="confirm-password"
+                placeholder="eg: ********" /><span id="passConfirm-missing">Confirm Password is required</span>
+            <label for="submit-form"></label><input type="submit" id="submit-form" onclick="formValidation()" />
+        </form>
+    </div>
+    <div class="confirmation-message" id="confirmation-message">
+        <span><i class="fa-solid fa-check-circle"></i></span>
+        <p>Form submitted successfully!</p>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
